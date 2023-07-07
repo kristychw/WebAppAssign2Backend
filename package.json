@@ -2,11 +2,8 @@
   "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "node server.js",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "vercel-build": ""
+    "start": "node app.js",
+    "vercel-build": "echo hello"
   },
   "private": true,
   "dependencies": {
