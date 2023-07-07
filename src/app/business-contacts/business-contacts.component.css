@@ -1,8 +1,8 @@
 .contacts {
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  height: 50vh; /*Adjust the height based on your layout*/
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
   margin-top: 20px;
   margin-bottom: 50px;
   padding-bottom: 10px;
@@ -42,4 +42,10 @@ button:hover {
 
 button + button {
   margin-left: 5px;
+}
+
+
+.logout-container {
+  align-items: center;
+  margin-top: 20px;
 }

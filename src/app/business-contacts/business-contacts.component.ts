@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-business-contacts',
@@ -15,7 +16,7 @@ export class BusinessContactsComponent implements OnInit {
 
   private apiUrl = 'http://localhost:4000/contacts'; // Update with your server's URL
 
-  constructor(private http: HttpClient, private router: Router, private location: Location) { }
+  constructor(private http: HttpClient, private router: Router, private location: Location, private authService: AuthService) { }
 
   ngOnInit() {
     this.loadContacts();
@@ -51,6 +52,11 @@ export class BusinessContactsComponent implements OnInit {
       }
     );
   }
-  
-  
+
+  logout() {
+    this.authService.logout(); // Remove login information from local storage
+    this.router.navigate(['login']);
+  }
+
+
 }

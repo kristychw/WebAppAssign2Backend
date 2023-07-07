@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // Enable CORS
-app.use(cors()); 
+app.use(cors());
 
 // MongoDB connection
 const dbConfig = require('./config/database.config');
@@ -52,7 +52,7 @@ app.listen(4000, ()=>{
 // app.use(bodyParser.json());
 
 // // Enable CORS
-// app.use(cors()); 
+// app.use(cors());
 
 // // MongoDB connection
 // const dbConfig = require('./config/database.config');

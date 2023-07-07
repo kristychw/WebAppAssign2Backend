@@ -10,7 +10,7 @@ exports.create = (req, res)=>{
         return res.status(400).send({
             'message': "Password can not be empty"
         })
-    } 
+    }
 
     const user = new User({
         username: req.body.username,
@@ -41,7 +41,7 @@ exports.update = (req, res) =>{
         return res.status(400).send({
             'message': "Password can not be empty"
         })
-    } 
+    }
 
 
 
@@ -74,34 +74,44 @@ exports.findAll = (req, res) => {
                 'error' : err
             })
         }
-    ) 
-}
-
-exports.findOne = (req, res) => {
-
-    const id = req.params.id;
-
-    User.findById(id).then(users => {
-            if (!users){
-                res.status(400).send({
-                    'message' : 'User do not exist!'
-                })
-            }
-            res.send(users)
-        }
-    ).catch(
-        err => {
-            res.status(500).send({
-                'message' : 'Something went wrong',
-                'error' : err
-            })
-        }
     )
 }
 
+exports.login = async (req, res) => {
+  const { username, password } = req.body;
+  const user = await User.findOne({ username: username, password: password })
+  if (user) {
+    // User exists, return a success response
+    res.status(200).json({ success: true });
+  } else {
+    // User does not exist, return an error response
+    res.status(401).json({ error: 'Invalid credentials' });
+  }
+
+
+  //User.findOne({ username: username, password: password }, (err, user) => {
+
+
+
+    // if (err) {
+    //   console.error(err);
+    //   res.status(500).json({ error: 'Internal Server Error' });
+    // } else {
+    //   if (user) {
+    //     // User exists, return a success response
+    //     res.status(200).json({ success: true });
+    //   } else {
+    //     // User does not exist, return an error response
+    //     res.status(401).json({ error: 'Invalid credentials' });
+    //   }
+    // }
+ // });
+};
+
+
 exports.delete = (req, res) =>{
     const id = req.params.id
-    User.findByIdAndRemove(id).then( users =>{ 
+    User.findByIdAndRemove(id).then( users =>{
         res.send({
             'message':'The user information is removed!'
         })
