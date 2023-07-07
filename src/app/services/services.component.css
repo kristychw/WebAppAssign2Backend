@@ -1,0 +1,29 @@
+/* File name: services.component
+   Student’s Name: Hin Wa Chan
+   StudentID: 301251828
+   Date: 11 Jun 2023  */
+
+.services-container {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.service-card img{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.service-card h2{
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.service-card p{
+  font-size: 16px;
+  line-height: 1.5;
+}

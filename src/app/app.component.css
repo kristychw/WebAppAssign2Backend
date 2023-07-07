@@ -1,0 +1,15 @@
+/* File name: app.component
+   Student’s Name: Hin Wa Chan
+   StudentID: 301251828
+   Date: 11 Jun 2023  */
+
+:host {
+  display: block;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #f8f8f8;
+}
+
+

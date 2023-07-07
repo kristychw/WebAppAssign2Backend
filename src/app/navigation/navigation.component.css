@@ -1,0 +1,75 @@
+/* File name: navigation.component
+   Student’s Name: Hin Wa Chan
+   StudentID: 301251828
+   Date: 11 Jun 2023  */
+
+.nav-container {
+  position: relative;
+  background-color: #F9F5F0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container img {
+  margin-right: 10px;
+}
+
+.nav-container p {
+  font-size: 30px;
+  color: rgb(216, 160, 86);
+  margin: 0;
+  padding-left: 10px ;
+  white-space: nowrap;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 200px;
+}
+
+.nav-container li {
+  display: inline;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.nav-container li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-left: 5px;
+}
+
+.nav-container li a:hover {
+  color: #555;
+}
+
+.authentication ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  display: flex;
+  margin-left: 430px;
+}
+
+/* .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #F9F5F0;
+  color: burlywood;
+  font-size: 26px;
+}
+
+.nav img {
+  margin: 0 16px;
+} */

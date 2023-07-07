@@ -1,0 +1,14 @@
+/* File name: footer.component
+   Student’s Name: Hin Wa Chan
+   StudentID: 301251828
+   Date: 11 Jun 2023  */
+
+footer{
+  display: block;
+  background-color: #F9F5F0;
+  color: rgb(216, 160, 86);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: medium;
+  padding: 5px 20px 5px 5px;
+}

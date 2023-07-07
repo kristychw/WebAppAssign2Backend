@@ -1,0 +1,45 @@
+.contacts {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 50vh; /*Adjust the height based on your layout*/
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+}
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #a6c7ff;
+}
+
+td {
+  border-bottom: 1px solid #a6c7ff;
+  background-color: #e8f1ffde;
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4569a0;
+}
+
+button + button {
+  margin-left: 5px;
+}
