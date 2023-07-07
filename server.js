@@ -1,12 +1,14 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const bodyParser = require('body-parser');
-const cors = require('cors');
+const bodyParser = require("body-parser");
+const cors = require("cors");
 
 // Set up the necessary middleware
-app.use(bodyParser.urlencoded({
-  extended:true
-}));
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 
 app.use(bodyParser.json());
 
@@ -14,33 +16,36 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB connection
-const dbConfig = require('./config/database.config');
-const mongoose = require('mongoose');
+const dbConfig = require("./config/database.config");
+const mongoose = require("mongoose");
 
-mongoose.connect(dbConfig.url, {
-    useNewUrlParser: true
-}).then(()=>{
-    console.log('Database is connected!');
-
-}).catch(err=>{
-    console.log('Database is NOT connected!! Please check!', err);
+mongoose
+  .connect(dbConfig.url, {
+    useNewUrlParser: true,
+  })
+  .then(() => {
+    console.log("Database is connected!");
+  })
+  .catch((err) => {
+    console.log("Database is NOT connected!! Please check!", err);
     process.exit();
-})
+  });
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "It is working!",
+  });
+});
 
-app.get('/',(req, res)=>{
-    res.json({
-        "message": "It is working!"
-    })
-})
-
-require('./routes/user.route')(app);
-require('./routes/contact.route')(app);
+require("./routes/user.route")(app);
+require("./routes/contact.route")(app);
 
 // Start the server
-app.listen(4000, ()=>{
-    console.log('Server is working!!');
+app.listen(4000, () => {
+  console.log("Server is working!!");
 });
+
+module.exports = app;
 
 // const express = require('express');
 // const app = express();
