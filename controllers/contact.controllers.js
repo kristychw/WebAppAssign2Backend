@@ -1,3 +1,7 @@
+//  Student’s Name: Hin Wa Chan
+//  StudentID: 301251828
+//  Date: 7 Jul 2023
+
 const Contact = require('../models/contact.models')
 
 exports.create = (req, res)=>{
@@ -6,7 +10,7 @@ exports.create = (req, res)=>{
         return res.status(400).send({
             'message': "Contact name can not be empty"
         })
-    } 
+    }
     const contact = new Contact({
         name: req.body.name,
         phone: req.body.phone,
@@ -31,7 +35,7 @@ exports.update = (req, res) =>{
         return res.status(400).send({
             'message': "Contact name can not be empty"
         })
-    } 
+    }
 
 
 
@@ -63,7 +67,7 @@ exports.findAll = (req, res) => {
                 'error' : err
             })
         }
-    ) 
+    )
 }
 
 exports.findOne = (req, res) => {
@@ -89,7 +93,7 @@ exports.findOne = (req, res) => {
 
 exports.delete = (req, res) =>{
     const id = req.params.id
-    Contact.findByIdAndRemove(id).then( contacts =>{ 
+    Contact.findByIdAndRemove(id).then( contacts =>{
         res.send({
             'message':'The contact information is removed!'
         })

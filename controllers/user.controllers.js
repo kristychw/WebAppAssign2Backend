@@ -1,3 +1,7 @@
+//  Student’s Name: Hin Wa Chan
+//  StudentID: 301251828
+//  Date: 7 Jul 2023
+
 const User = require('../models/user.models')
 
 exports.create = (req, res)=>{
